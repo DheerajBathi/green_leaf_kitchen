@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="main">
+        <!-- <video autoplay loop muted plays-inline> 
+            <source src="../ishippro/5644949-hd_1920_1080_25fps.mp4" type="video/mp4" class="my" style="width: 100%; height: 100%;">
+        </video> -->
+        
+            <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span><h3>or use your email for registration</h3></span>
+                <input type="text" placeholder="Name"  style="border: none;"/>
+                <input type="email" placeholder="Email"  style="border: none; "/>
+                <input  type="password" placeholder="Password"  style="border: none;"/>
+                <button class="s11"><a href="http://127.0.0.1:5500/Iship/Main.html">Sign Up</a></button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your account</span>
+                <input id="eemail" type="email" placeholder="Email" style="border: none;"/>
+                <input id="pass" type="password" placeholder="Password"  style="border: none;" />
+                <a href="#">Forgot your password?</a>
+                <button class="s11" onclick="signin()" id="signInButton"><a href="#">Sign In</a></button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+function signin(){
+    var input=document.getElementById('eemail').value;
+    var input1=document.getElementById('pass').value;
+    console.log(input)
+    if(input1=='1234' && input=='22a91a0459@aec.edu.in') window.location.href = '../Iship/home/Main.html';
+    else if((input1=='1234' && input=='22a91a1206@aec.edu.in')) window.location.href = '../Iship/home/Main.html';
+    else if((input1=='1234' && input=='23a95a1203@aec.edu.in')) window.location.href = '../Iship/home/Main.html';
+    else if((input1=='1234' && input=='22a91a05G5@aec.edu.in')) window.location.href = '../Iship/home/Main.html';
+    else if((input1=='1234' && input=='23mh5A4203@acoe.edu.in')) window.location.href = '../Iship/home/Main.html';
+    else if((input1=='1234' && input=='23p35A1205@acet.ac.in')) window.location.href = '../Iship/home/Main.html';
+    else alert('Please Check your credentials');
+}
+    </script>
+</body>
+</html>
